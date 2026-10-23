@@ -1,0 +1,119 @@
+site_name: Dwarfium Lite Suite
+site_description: Dwarfium Hub, Dwarfium Lite and Dwarfium Scope Archive for DWARF telescopes - what they do and how to do things with them.
+site_url: https://stevejcl.github.io/Dwarfium-Lite-Suite/
+repo_url: https://github.com/stevejcl/Dwarfium-Lite-Suite
+repo_name: stevejcl/Dwarfium-Lite-Suite
+edit_uri: edit/main/docs/
+docs_dir: docs
+
+# Report a broken link or anchor (zensical build --strict fails on it)
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn
+
+theme:
+  name: material
+  language: en
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Day mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Night mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.action.edit
+    - content.code.copy
+    - toc.follow
+
+extra_css:
+  - assets/extra.css
+
+plugins:
+  - search:
+      lang: [en, fr]
+  - tags
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - def_list
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.keys
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra:
+  social:
+    - icon: material/download
+      link: https://github.com/stevejcl/dwarfium-hub/releases/latest
+      name: Download Dwarfium Hub
+    - icon: fontawesome/brands/github
+      link: https://github.com/stevejcl
+      name: stevejcl on GitHub
+
+nav:
+  - Home: index.md
+  - Get started:
+      - start/index.md
+      - Install everything with the Hub: start/install.md
+      - Add your first Dwarf: start/first-dwarf.md
+      - Your first night, end to end: start/first-night.md
+  - I want to…:
+      - how-to/index.md
+      - Connect and manage Dwarfs: how-to/connect.md
+      - Choose and plan targets: how-to/plan.md
+      - Capture and schedule: how-to/capture.md
+      - Mosaics and the Milky Way: how-to/mosaic.md
+      - Leave a Dwarf unattended: how-to/night.md
+      - Back up and tidy sessions: how-to/archive.md
+      - Check and explore results: how-to/explore.md
+      - Process images: how-to/process.md
+      - Watch, share and work remotely: how-to/remote.md
+      - Install, update, maintain: how-to/maintain.md
+      - All topics (tags): tags.md
+  - The apps:
+      - apps/index.md
+      - Dwarfium Hub: apps/hub.md
+      - Dwarfium Lite: apps/lite.md
+      - Dwarfium Scope Archive: apps/scope-archive.md
+  - Reference:
+      - reference/index.md
+      - Glossary: reference/glossary.md
+      - Ports, pages and files: reference/ports-files.md
+      - How the apps work together: reference/integration.md
+      - Troubleshooting: reference/troubleshooting.md
+  - What's new: whats-new.md
+  - Contribute to the docs: contributing.md
