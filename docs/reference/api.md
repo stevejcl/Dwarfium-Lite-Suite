@@ -292,6 +292,10 @@ Shows one of Lite's pages where Lite is open **on this computer** (its window, o
 
 ---
 
+## JavaScript helpers
+
+From a web page, `/js/dwarf-scheduler.js` builds a native schedule from a list of targets and opens the panel that sends it: [JavaScript helpers](js-api.md).
+
 ## Pages served next to the API
 
 | Address | |

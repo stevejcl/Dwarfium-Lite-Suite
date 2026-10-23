@@ -6,4 +6,5 @@ The details, for when you need them:
 - [**Ports, pages and files**](ports-files.md) — what runs where, and where your data lives.
 - [**How the apps work together**](integration.md) — the links between Lite, Scope Archive and the Hub.
 - [**Dwarfium Lite API**](api.md) — every endpoint, for your own tools and scripts.
+- [**JavaScript helpers**](js-api.md) — the scripts the catalog uses to send targets, reusable in your own page.
 - [**Troubleshooting**](troubleshooting.md) — symptoms and fixes.
