@@ -41,6 +41,6 @@ On the Hub's home tab, each app shows its installed version and the latest one.
 
 ## Without the Hub
 
-Each app also has its own releases ([Dwarfium Lite](https://github.com/stevejcl/astro_dwarf_session/releases), [Scope Archive](https://github.com/stevejcl/dwarfium-scope-archive/releases)) and runs from source with Python 3.10+ — see each repository's README.
+Each app also has its own releases ([Dwarfium Lite](https://github.com/stevejcl/astro_dwarf_session/releases), [Scope Archive](https://github.com/stevejcl/dwarfium-scope-archive/releases)) and runs from source with Python 3.12+ — see each repository's README.
 
 **Next:** [Add your first Dwarf](first-dwarf.md)
