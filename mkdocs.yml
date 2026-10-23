@@ -114,6 +114,8 @@ nav:
       - Glossary: reference/glossary.md
       - Ports, pages and files: reference/ports-files.md
       - How the apps work together: reference/integration.md
+      - Dwarfium Lite API: reference/api.md
+      - JavaScript helpers: reference/js-api.md
       - Troubleshooting: reference/troubleshooting.md
   - What's new: whats-new.md
   - Contribute to the docs: contributing.md
