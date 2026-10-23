@@ -35,8 +35,10 @@ When an app runs in its own window, the other app's pages open **in that window*
 |---|---|
 | `GET /api/dwarfs` | Paired Dwarfs and their state |
 | `GET /api/app-info` | `{"app", "name", "version"}` |
-| `GET /api/identify?ip=` | Read a Dwarf's UID and model at an IP |
-| `POST /api/schedule`, `/api/program` | Send targets (catalog page, Milky Way planner) |
+| `GET /api/identify?ip=` | Flash a Dwarf's ring light |
+| `POST /api/schedule`, `/api/program` | Send targets (catalog page, Milky Way planner, *Plan a target*) |
 | `GET /api/sites` | Sites |
 | `POST /api/megastack` | Megastack on the Dwarf |
 | `POST /api/open-page` | Show one of Lite's pages in its window |
+
+[:octicons-arrow-right-24: Learn more: the detailed API reference](api.md) — every endpoint, its fields, its answers and errors, with examples.
