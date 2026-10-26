@@ -45,7 +45,7 @@ For a single wide session whose foreground came out smeared, see [Fix the foregr
 
 1. The tab lists the mosaics found on the backup drive — sessions named `R<row>C<col>`, grouped by name and night — or takes the FITS of a folder you choose.
 2. Tick the tiles → **Assemble**. Each tile is placed where its sky is (plate solved if needed), corrected for lens distortion, its foreground left out, its brightness and colour levelled with its neighbours.
-3. Output in `MOSAIC_WCS` next to the sessions: a linear 32-bit FITS with its WCS (for Siril) and a stretched preview. About 2 min and 1 GB for 5 tiles.
+3. Output in `_WCS_MOSAIC` at the archive's root: a linear 32-bit FITS with its WCS (for Siril) and a stretched preview. About 2 min and 1 GB for 5 tiles.
 
 The assembly keeps running if you go to another page: come back to the tab to see its progress. From Explore, **Mosaic (astrometry)** on a tile's session opens the tab on its mosaic.
 

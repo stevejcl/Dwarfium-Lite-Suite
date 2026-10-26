@@ -10,7 +10,7 @@ tags:
 
 **App:** Scope Archive → Explore → **Prepare for Siril**
 
-Copies the session's lights — and the matching darks from the [Dark Library](#darks) when the 🎯 badge found some — to a processing folder, with a `siril_session.json`. Run it in Siril with the **Dwarfium Archive Selector** script (by Stephan Schmidt-Bilkenroth; a copy is in Scope Archive's `extern` folder) to calibrate, register and stack.
+Copies the session's lights — and the matching darks from the [Dark Library](#darks) when the 🎯 badge found some — to a processing folder, with a `siril_session.json`. The frames the Dwarf rejected (`failed_`) are left out. Run it in Siril with the **Dwarfium Archive Selector** script (by Stephan Schmidt-Bilkenroth; a copy is in Scope Archive's `extern` folder) to calibrate, register and stack — or to [measure a variable star](photometry.md#measure).
 
 ## Stack several nights of a target in Siril { #siril-megastack }
 
@@ -35,6 +35,7 @@ A library is a `CALI_FRAME` folder on a backup drive, files named like `dark_exp
 - **Scan Library** — inventory by camera, exposure, gain, binning, temperature.
 - **Download Darks** — opens Transfer set to copy `CALI_FRAME` from the Dwarf.
 - In Explore, the 🎯 badge says if a session has matching darks: green (temperature in range), orange (closest), red (none).
+- A dark session whose temperature drifted a degree (frames at 19 and 20 °C) gives all its frames, stacked together.
 
 ## Keep my processed images next to the raw session { #manual-sessions }
 
@@ -46,4 +47,4 @@ Import a result from Siril, GraXpert, Stellar Studio (URL) or any tool: JPG, PNG
 
 **App:** Scope Archive → Explore → **Fix the foreground** (backup drive, wide sessions)
 
-For sessions shot before DWARF 3 V1.5.3.9 / DWARF mini V1.1.4.4: the Dwarf stacked on the stars and smeared the trees and roof. Scope Archive rebuilds the image from the raw frames: the foreground stacked on itself, the sky on the stars. The session is left untouched; the result goes into `FIXED_FOREGROUND` and shows in the session's **Image Fix** tab.
+For sessions shot before DWARF 3 V1.5.3.9 / DWARF mini V1.1.4.4: the Dwarf stacked on the stars and smeared the trees and roof. Scope Archive rebuilds the image from the raw frames: the foreground stacked on itself, the sky on the stars. The session is left untouched; the result goes into `_FIXED_FOREGROUND` at the archive's root and shows in the session's **Image Fix** tab.

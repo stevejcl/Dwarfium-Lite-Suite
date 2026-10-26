@@ -14,6 +14,29 @@ The apps are local web apps: any device on the same network opens them in a brow
 - **Dwarfium Lite:** `http://<PC IP>:8090` (port set by the Hub; started by hand, the port is printed at startup, or fix it with `--port`). Then *Add to Home Screen* (iOS) / *Install app* (Android) for an app icon.
 - **Scope Archive:** start it with **LAN access** (Hub option, or `--lan`), then `http://<PC IP>:8080`.
 
+From the phone, **Archive in Dwarfium Scope Archive** opens Scope Archive's page **on the phone**, at the address the phone uses to reach the PC (LAN or Tailscale), when Scope Archive runs with LAN access. Otherwise it opens in Scope Archive's window on the PC.
+
+On a phone, what only works on the PC says so: Windows' folder or file dialogs, and "open in Explorer" or "open the file", show *Available on Desktop only*. The folder pickers of **Transfer** and **Mosaic** are shown in the page and work from the phone.
+
+## Install Dwarfium Lite full screen on Android { #https }
+
+**App:** Dwarfium Lite → a Dwarf's **Settings** → **HTTPS for phones** (last card)
+
+Android installs a web app full screen, without the address bar, only over **HTTPS**. Once it is on, the PC also answers on port **8443**; plain HTTP and the PC's window are unchanged.
+
+1. Tick **HTTPS on**. Optionally give **Dwarfium's certificate folder**, the one with `CADwarfiumCert.pem` and `CADwarfiumKey.pem`: a phone that already trusts Dwarfium then needs nothing more. Left empty, the app makes its own certificate authority, limited to private networks, Tailscale and `.local` names.
+2. **Apply**. Two QR codes appear.
+3. On the phone, scan the **first** one and install the certificate authority, once (Android: *Install a certificate* → **CA certificate**). You can skip this with Dwarfium's.
+4. Scan the **second** one, `https://<PC IP>:8443/`, then in Chrome: menu ⋮ → **Install app**.
+
+The certificate is signed again whenever the PC's address changes (LAN or Tailscale), so the phone never needs a new setup.
+
+!!! warning "Installed from the http address?"
+    An icon added from `http://…:8090` opens with the address bar. Remove it and install again from the HTTPS address.
+
+!!! tip "The phone can't reach it"
+    Allow port **8443** (TCP) in the PC's firewall.
+
 ## Let someone watch without touching anything { #watch }
 
 **App:** Dwarfium Lite → `/watch`

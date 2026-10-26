@@ -17,7 +17,7 @@ tags:
 | What to shoot tonight | Targets well placed tonight, plan them on a Dwarf, tonight's plan | [Tonight](../how-to/plan.md#tonight) |
 | Dwarf Configuration | Your Dwarfs (USB path, IP, model); analyze a Dwarf's drive; sessions with errors | [Back up](../how-to/archive.md#transfer) |
 | Backup Drive | Your backup drives; analyze, check integrity, transfer history | [Back up](../how-to/archive.md#analyze-all) |
-| Explore | Every session by object, filters, details, gallery, frames, notes, scores, Clean / Restore FITS, Prepare for Siril, SkyBot, Megastack | [Explore](../how-to/explore.md#explore) |
+| Explore | Every session by object, filters, details, gallery, frames, notes, scores, Clean / Restore FITS, Prepare for Siril, SkyBot, Megastack, Photometry tab | [Explore](../how-to/explore.md#explore), [Light curves](../how-to/photometry.md#results) |
 | Transfer | Archive (Dwarf → backup) or Restore, USB or FTP, in the background | [Back up](../how-to/archive.md#transfer) |
 | Import a session | One session sent from Dwarfium Lite | [Archive one session](../how-to/archive.md#one-session) |
 | Manual Sessions / Manual Explore | Your processed images, linked to their raw session | [Manual sessions](../how-to/process.md#manual-sessions) |
@@ -27,7 +27,7 @@ tags:
 | Sky Map | All your sessions on the sky (Aladin Lite) | [Sky map](../how-to/explore.md#sky-map) |
 | Catalog | DSO catalog; assign a target to a session | [Explore](../how-to/explore.md#explore) |
 | MTP Device | DWARF II over MTP (Windows) | [Back up](../how-to/archive.md#transfer) |
-| Analyze everything | Re-analyze every Dwarf copy and backup drive | [Re-sync](../how-to/archive.md#analyze-all) |
+| Analyze everything | Re-analyze every Dwarf copy and backup drive; Stop; shown again when you come back to it | [Re-sync](../how-to/archive.md#analyze-all) |
 | Settings | Language, theme, database backup, astrometry (ASTAP, Nova), stitch parameters, PDF report, LAN | [DB backup](../how-to/archive.md#db-backup) |
 
 ## Command-line tools
@@ -37,4 +37,5 @@ Run from the installation folder: `tools/db_diagnostic.py`, `db_cleanup_dupes.py
 ## Good to know
 
 - Database: `dwarf_backup.db`, upgraded automatically with each version.
+- Siril script (`extern/Dwarfium_archive_selector.py`): copy it into Siril's scripts folder again after an update. Its photometry installs `astropy` and `matplotlib` in Siril's Python on first use. → [Variable stars](../how-to/photometry.md)
 - DWARF II: no USB drive access — FTP, or MTP on Windows. DWARF 3 and mini can't be told apart over FTP: the configured model is trusted.
