@@ -92,11 +92,21 @@ Find your need below, or type it in the **search** box (++slash++). Each line le
 | [Keep my processed images next to the raw session](process.md#manual-sessions) | Scope Archive |
 | [Fix a smeared foreground on a wide session](process.md#fix-foreground) | Scope Archive |
 
+## :material-chart-bell-curve: Time variable stars { #photometry }
+
+| I want to… | App |
+|---|---|
+| [Find tonight's eclipsing binary minima / pulsating star maxima](photometry.md#minima) | Lite |
+| [Check the exposure before the session](photometry.md#check-exposure) | Siril script |
+| [Measure a variable star's light curve](photometry.md#measure) | Scope Archive → Siril script |
+| [See a star's light curves, all sessions together](photometry.md#results) | Scope Archive |
+
 ## :material-cellphone-link: Watch, share and work remotely { #remote }
 
 | I want to… | App |
 |---|---|
 | [Use the apps from my phone](remote.md#phone) | Lite, Scope Archive |
+| [Install Dwarfium Lite full screen on Android (HTTPS)](remote.md#https) | Lite |
 | [Let someone watch without touching anything](remote.md#watch) | Lite |
 | [Drive Dwarfs at a remote site (mini PC, Tailscale)](remote.md#remote-site) | Hub, Lite |
 | [Take a laptop to the field and merge back at home](remote.md#laptop) | Hub |

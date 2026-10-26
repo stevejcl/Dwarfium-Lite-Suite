@@ -54,6 +54,10 @@ Per backup drive or Dwarf: sessions sorted by size or date, the size on the back
 
 Analyses the local copy of every Dwarf and every backup drive, one after the other — the database matches the files again after another installation changed them or a folder was moved by hand. Log in `logs/analyze_all_<date>.log`.
 
+- **Stop** ends it at the next object's folder: what was found is kept and nothing is removed. The next drives are not started.
+- It goes on when you open another page. Come back to the page, from the PC or a phone, to see its progress and Stop it. One analysis runs at a time.
+- It also moves the old result folders to the archive's root (`_FIXED_FOREGROUND`, `_PHOTOMETRY`, `_WCS_MOSAIC`).
+
 For one drive only: **Backup Drive** → **Analyze Current Drive**, **Check Session Integrity** (FITS count on disk vs. database).
 
 ## Back up the archive database { #db-backup }

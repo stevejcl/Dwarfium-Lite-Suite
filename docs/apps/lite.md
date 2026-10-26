@@ -23,13 +23,13 @@ One card per Dwarf: connected or not, battery, sensor temperature, free space, t
 | Live view | Tele and Wide, Stacked / Last frame | [Capture now](../how-to/capture.md#live) |
 | Shooting schedule (on device) | The Dwarf's own schedule: view, add, sync, delete, View / Check | [Native schedule](../how-to/capture.md#native) |
 | Astro Sessions | The sessions on the Dwarf: view, download, archive, megastack | [On the Dwarf](../how-to/explore.md#on-the-dwarf), [Megastack](../how-to/capture.md#megastack) |
-| Settings | Site, location, Wi-Fi, IP, Bluetooth recovery, wake up from the phone, Stellarium, Scope Archive link | [Wake up](../how-to/connect.md#wake-up), [IP changed](../how-to/connect.md#ip-changed) |
+| Settings | Site, location, Wi-Fi, IP, Bluetooth recovery, wake up from the phone, Stellarium, Scope Archive link, HTTPS for phones | [Wake up](../how-to/connect.md#wake-up), [IP changed](../how-to/connect.md#ip-changed), [HTTPS](../how-to/remote.md#https) |
 
 ## Programs page
 
 | Tab / feature | What it does | How-to |
 |---|---|---|
-| Program editor | Steps, target (catalog, Stellarium, RA/Dec), altitude chart, best slot, end time, mosaic, start position, after the session | [Create a program](../how-to/capture.md#program) |
+| Program editor | Steps, target (catalog, Stellarium, RA/Dec, variable star min / max), altitude chart, best slot, end time, mosaic, start position, after the session | [Create a program](../how-to/capture.md#program), [Variable stars](../how-to/photometry.md#minima) |
 | Scheduler | Runs due programs in the background, retries failed steps | [Create a program](../how-to/capture.md#program) |
 | Results | View / Check, Force resume, Archive | [View / Check](../how-to/explore.md#view-check) |
 | Scripts | After the session and end of the night, initial position, bulky accessory | [Unattended](../how-to/night.md) |

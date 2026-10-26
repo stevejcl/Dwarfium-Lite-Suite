@@ -9,6 +9,10 @@ The highlights of the latest versions, with the page that explains them. Every d
 
 ### 3.2.6 — October 2026
 
+- **Variable stars**: eclipsing binary minima and pulsating star maxima from tonight, one click to fill the program. → [Minima](how-to/photometry.md#minima)
+- **HTTPS for phones**: Dwarfium Lite installed full screen on Android, with Dwarfium's certificate reused. → [HTTPS](how-to/remote.md#https)
+- **Archive from the phone** opens Scope Archive on the phone (LAN, Tailscale). → [Phone](how-to/remote.md#phone)
+- Manual positioning pad on a phone: no more runaway mount, Stop always sent.
 - **After the session and end of the night** — leave the end-of-session screen, close the lenses or power off, initial position, bulky accessory. → [Unattended](how-to/night.md)
 - **Megastack on the Dwarf** from the explorer (or asked by Scope Archive). → [Megastack](how-to/capture.md#megastack)
 - **Wake up a Dwarf from the phone** (`/wake-dwarf`). → [Wake up](how-to/connect.md#wake-up)
@@ -32,6 +36,12 @@ The highlights of the latest versions, with the page that explains them. Every d
 
 ### V3.4.6 — October 2026
 
+- **Variable star photometry** in the Siril script: Check exposure, light curve, plate solve by `seqplatesolve`, resume after a stop. → [Measure](how-to/photometry.md#measure)
+- Explore: **Photometry** tab, a star's sessions put together across the drives. → [Light curves](how-to/photometry.md#results)
+- Result folders at the archive's root (`_PHOTOMETRY`, `_FIXED_FOREGROUND`, `_WCS_MOSAIC`). → [Files](reference/ports-files.md#where-the-data-lives)
+- Analyze everything: **Stop**, and shown again when you come back to it. → [Re-sync](how-to/archive.md#analyze-all)
+- Darks of one dark session at two temperatures used together. → [Darks](how-to/process.md#darks)
+- On a phone: readable folder picker, *Available on Desktop only* for what needs the PC. → [Phone](how-to/remote.md#phone)
 - Mosaic page, **Milky Way** tab: assembly by astrometry. → [Milky Way](how-to/mosaic.md#milky-way-assembly)
 - Explore: **Fix the foreground** of a wide session. → [Fix foreground](how-to/process.md#fix-foreground)
 - Explore: a session's **frames**, reject the bad ones. → [Quality](how-to/explore.md#quality)

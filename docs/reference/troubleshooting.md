@@ -15,6 +15,15 @@
 ??? question "*Archive in Dwarfium Scope Archive* is greyed"
     Scope Archive isn't running, or Lite doesn't know its URL: set *Dwarfium Scope Archive URL* and *Dwarf Id* in the Dwarf's Settings (or link it in the [Hub](../how-to/connect.md#link)). Scope Archive must be V3.4.0+.
 
+??? question "Installed on the phone, but it opens with the address bar"
+    It was installed from the `http://` address, or the phone doesn't trust the certificate (no padlock in Chrome). Install the certificate authority, remove the icon and install again from `https://<PC IP>:8443/`. → [HTTPS for phones](../how-to/remote.md#https)
+
+??? question "*Available on Desktop only* on the phone"
+    That button needs the PC: a Windows folder or file dialog, or a folder or file opened in Windows Explorer. Do it in the app's window on the PC. → [Phone](../how-to/remote.md#phone)
+
+??? question "Siril closed the connection during Build Sessions"
+    Siril was closed or crashed, but the files made so far are kept. Start Siril again, then **Load Dwarfium JSON** → **Resume (keep the files)** → **Build Sessions**. → [Variable stars](../how-to/photometry.md#measure)
+
 ??? question "A program is in Error but the Dwarf kept capturing"
     Programs → Results → **Force resume**. → [Force resume](../how-to/capture.md#force-resume)
 

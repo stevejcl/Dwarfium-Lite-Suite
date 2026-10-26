@@ -6,6 +6,7 @@
 |---|---|---|
 | Dwarfium Scope Archive | **8080** | Local only, unless started with `--lan` / Hub *LAN access* |
 | Dwarfium Lite | **8090** with the Hub | Started by hand: chosen automatically and printed at startup; `--port` fixes it. Always reachable on the network |
+| Dwarfium Lite, HTTPS | **8443** | Only when [HTTPS for phones](../how-to/remote.md#https) is on: relays to the port above |
 | Dwarf live view | 8092 | `http://<dwarf-ip>:8092/mainstream` (Tele), `/secondstream` (Wide) |
 
 ## Dwarfium Lite pages
@@ -34,6 +35,7 @@
     | `task_check_cache.json` | View / Check results |
     | `catalog_add_on.json` | Targets added from the catalog page |
     | `components/locales/` | Languages |
+    | `~/.astro_dwarf_session/https/` | HTTPS for phones: its settings, certificate authority and server certificate |
 
 === "Scope Archive"
 
@@ -43,7 +45,7 @@
     | `db/dso_catalog.json` | DSO catalog (also used by Lite when installed side by side) |
     | `transfer_journal.json` | Transfer history |
     | `logs/` | Analyze-everything logs |
-    | On the backup drive: `MOSAIC_WCS`, `FIXED_FOREGROUND` | Milky Way mosaics, fixed foregrounds |
+    | At the archive's root: `_WCS_MOSAIC`, `_FIXED_FOREGROUND`, `_PHOTOMETRY/<star>/<session>/` | Milky Way mosaics, fixed foregrounds, light curves (moved there by Analyze everything) |
 
 === "Hub"
 
