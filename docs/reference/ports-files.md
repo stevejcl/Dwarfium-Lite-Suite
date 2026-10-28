@@ -33,7 +33,8 @@
     | `Devices_Sessions/<dwarf>/Astro_Sessions/{ToDo,Current,Done,Error}/` | Programs |
     | `end_of_night.json` | After the session / end of the night settings |
     | `task_check_cache.json` | View / Check results |
-    | `catalog_add_on.json` | Targets added from the catalog page |
+    | `~/.astro_dwarf_session/catalog_add_on.json` | Your own objects (*My objects*, the catalog page's) — next to Scope Archive's catalog instead when it is installed side by side |
+    | `~/.astro_dwarf_session/favorites.json` | Your favourite objects |
     | `components/locales/` | Languages |
     | `~/.astro_dwarf_session/https/` | HTTPS for phones: its settings, certificate authority and server certificate |
 

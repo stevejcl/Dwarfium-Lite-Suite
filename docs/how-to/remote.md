@@ -41,7 +41,7 @@ The certificate is signed again whenever the PC's address changes (LAN or Tailsc
 
 **App:** Dwarfium Lite → `/watch`
 
-A read-only dashboard and per-Dwarf view: live camera, battery, temperature, capture progress, exposure / gain / filter. No button in this mode can send a command to a Dwarf — safe to give the link or show the QR code (*Scan to open Watch mode*) to anyone on the network.
+A read-only dashboard and per-Dwarf view: the stacked image (with the display adjustments made in the [full-screen view](capture.md#full-screen)), battery, temperature, capture progress, exposure / gain / filter. A click on the image opens the same full-screen view, with the session's progress over it — the watcher can only hide the info. No button in this mode can send a command to a Dwarf — safe to give the link or show the QR code (*Scan to open Watch mode*) to anyone on the network.
 
 ## Drive Dwarfs at a remote site { #remote-site }
 
