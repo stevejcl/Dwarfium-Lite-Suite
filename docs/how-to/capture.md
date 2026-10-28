@@ -13,11 +13,25 @@ tags:
 
 - **Camera settings** — exposure, gain, binning, filter (per model), **Frames** (the number of images, for both cameras: sent on Enter or when leaving the field).
 - **Actions** — calibration, **EQ Solving** (with the live azimuth / altitude correction: which way to turn the knobs), goto, capture, reboot, close the lenses, positions…
-- **Live view** — Tele and Wide panels, each foldable; a **Stacked / Last frame** switch.
+- **Live view** — Tele and Wide panels, each foldable; a **Stacked / Last frame** switch; **Full screen** opens the [live stacking view](#full-screen).
 - The lights and power-indicator buttons work during a capture too. **Shut down** (far right of *Disconnect*) powers the Dwarf off after a confirmation.
 
 !!! note "Live view needs FFmpeg"
     The RTSP live view uses FFmpeg. Without it, the Dwarf's page and the log file say so.
+
+## Follow the stacking full screen { #full-screen }
+
+**App:** Dwarfium Lite → the full-screen button of a Dwarf's card, or **Full screen** in its camera section
+
+- **The last stacked image**, replaced as soon as the next one is loaded.
+- **Over it:** the Dwarf and its target, *10 stacked · 12/20 taken · ends at 23:45*, the camera, exposure, gain and filter. **ⓘ** hides them (remembered by the browser).
+- **Display adjustments** (the sliders button): brightness, contrast, saturation, black point, gamma, Reset. They belong to the Dwarf — its [watch views](remote.md#watch) show the image adjusted the same way — and change nothing on the Dwarf or in the files.
+- **Zoom**: mouse wheel or pinch, drag to move, double click or double tap to reset. Each viewer zooms on their own.
+- **DWARF mini**: the only one stacking with both cameras; the other one shows small in a corner — a click swaps them, a button hides it.
+- During a [megastack](#megastack), its stack and its progress.
+- The full-screen button of the browser, and **✕** to go back.
+
+The image goes through Dwarfium Lite: the Dwarf is asked once per new image, whatever the number of viewers, and a phone over HTTPS or Tailscale sees it too.
 
 ## Create a program and run it later { #program }
 
@@ -77,7 +91,7 @@ After a network drop, a run can be marked as failed while the Dwarf is still cap
 The Dwarf stacks several of its sessions of one target together — or restacks a single one — into `Astronomy/RESTACKED/`, like the official app. The raw FITS must still be on the Dwarf.
 
 1. Only stackable sessions are shown, grouped by target. Tick one or more of the same target (single captures or mosaics, not mixed; filters can be mixed).
-2. **Megastack**. The Dwarf checks first (binning, dark frames) and says why if it refuses.
+2. **Megastack**. The Dwarf checks first (binning, target, filter) and says why if it refuses. Missing dark frames don't stop it — as in the official app, it stacks without them and the check step says how many were missing.
 3. Progress shows everywhere: *Megastack in progress · 436/598 · 399 stacked*.
 
 Scope Archive can ask for it too, from its Explore page. Meanwhile the Dwarf does nothing else: a due program waits.

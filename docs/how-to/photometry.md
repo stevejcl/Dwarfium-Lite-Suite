@@ -47,7 +47,7 @@ Needs Siril 1.4.0+ and Internet (plate solve, APASS comparison stars, VSX).
 2. In Siril, run the **Dwarfium Archive Selector** script and tick **📈 Photometry**.
 3. **📡 Load Dwarfium JSON** on the session's `siril_session.json`. It copies the session and writes a `01_photometry_<star>.ssf` script.
 4. **🚀 Build Sessions** runs it:
-    1. calibration and the green channel (AAVSO TG band);
+    1. calibration with the dark and the flat (the DWARF's factory calibration, when Prepare for Siril found one), and the green channel (AAVSO TG band);
     2. plate solve of the whole sequence by `seqplatesolve` (about a minute for 500 images), then one by one any image it left unsolved;
     3. comparison stars (APASS), the same in every image;
     4. the script's own differential photometry.
@@ -57,6 +57,7 @@ What it takes care of:
 
 - **Times:** DATE-OBS (the Dwarf's local time) is converted to UTC, with JD, HJD and BJD at mid-exposure, and the airmass for each point.
 - **Saturation:** stars above **3300 ADU** are left out, and comparison stars with a neighbour in their aperture too. You are asked whether to keep the target's saturated images: they are then flagged, drawn apart and kept out of the means.
+- **Clouds and planes:** an image with far fewer comparison stars than the others (under 3/4 of the session's median) or a much larger error (over twice the median) is flagged *cloudy*: kept in the CSV, drawn as a grey cross, left out of the means, the fit and the combined curve.
 - **Long sessions:** the lights are linked, not copied, and the intermediate images are deleted as it goes. 500 images would otherwise take about 40 GB.
 
 !!! tip "Siril closed, or crashed, during a long session"
@@ -66,10 +67,24 @@ What it takes care of:
     2. **📡 Load Dwarfium JSON**, then **Resume (keep the files)**.
     3. **🚀 Build Sessions** picks up from the plate solve, skipping the images already solved.
 
+## Time of maximum or minimum, and O–C { #extrema }
+
+At the end of the measure, the script times each **maximum** (pulsating star) or **minimum** (eclipsing binary) inside the session, from the star's elements in VSX (period, epoch):
+
+- pulsating star: a Fourier series of the curve with the period fixed; eclipsing binary: Kwee – van Woerden; both checked against a local polynomial;
+- the time in HJD and BJD, in UTC and local time, with its error (± a few tenths of a minute on a good night), and the magnitude;
+- the **predicted time** and the **O–C** in minutes;
+- on the plot: the fitted curve, the time and its error band; in `extrema_<star>.csv`, archived with the session; under the star's name in Explore's Photometry tab.
+
+Without a known period (VSX unreachable), only the session's own extremum is timed, with a warning. An extremum on the session's edges, or in saturated images, is not timed: the summary says why.
+
+!!! example "DY Peg, 2026-10-27"
+    Maximum at 22:02:45 local time, HJD 2461341.38110 ± 0.5 min, O–C −1.1 min, despite a cloud just before it (4 images left out).
+
 ## See a star's light curves { #results }
 
 **App:** Scope Archive → Explore → a session → **Photometry** tab
 
-The results are archived at the archive's root, by star: `_PHOTOMETRY/<star>/<session>/`. The tab shows the session's curve and its CSV. Above it is the **combined curve** of all the star's sessions, from every backup drive: each session is offset onto the others through their common comparison stars. **Refresh** reads them again.
+The results are archived at the archive's root, by star: `_PHOTOMETRY/<star>/<session>/`. The tab shows the session's times of maximum / minimum, its curve and its CSV. Above it is the **combined curve** of all the star's sessions, from every backup drive: each session is offset onto the others through their common comparison stars. **Refresh** reads them again.
 
 The files open on the PC: from a phone, these buttons say *Available on Desktop only*.

@@ -9,12 +9,15 @@ The highlights of the latest versions, with the page that explains them. Every d
 
 ### 3.2.6 — October 2026
 
+- **Full-screen stacking view**: the stacked image, the session's progress and settings over it, display adjustments shared with the watch views, zoom. → [Full screen](how-to/capture.md#full-screen)
+- **Pick from catalog**: a search that finds `m42` as `Messier 42`, **favourites**, **recent targets**, **my objects** (kept from the program editor), a phone layout. → [My objects](how-to/plan.md#my-objects)
+- A **Dwarf's name** shown everywhere and renamed in its Settings.
 - **Variable stars**: eclipsing binary minima and pulsating star maxima from tonight, one click to fill the program. → [Minima](how-to/photometry.md#minima)
 - **HTTPS for phones**: Dwarfium Lite installed full screen on Android, with Dwarfium's certificate reused. → [HTTPS](how-to/remote.md#https)
 - **Archive from the phone** opens Scope Archive on the phone (LAN, Tailscale). → [Phone](how-to/remote.md#phone)
 - Manual positioning pad on a phone: no more runaway mount, Stop always sent.
 - **After the session and end of the night** — leave the end-of-session screen, close the lenses or power off, initial position, bulky accessory. → [Unattended](how-to/night.md)
-- **Megastack on the Dwarf** from the explorer (or asked by Scope Archive). → [Megastack](how-to/capture.md#megastack)
+- **Megastack on the Dwarf** from the explorer (or asked by Scope Archive); missing darks no longer stop it. → [Megastack](how-to/capture.md#megastack)
 - **Wake up a Dwarf from the phone** (`/wake-dwarf`). → [Wake up](how-to/connect.md#wake-up)
 - Milky Way planner: **foreground pass**. → [Foreground](how-to/mosaic.md#foreground)
 - Catalog's Mosaic Inspector reads each frame's `.wcs` file. → [Mosaic](how-to/mosaic.md#dwarf-mosaic)
@@ -36,7 +39,8 @@ The highlights of the latest versions, with the page that explains them. Every d
 
 ### V3.4.6 — October 2026
 
-- **Variable star photometry** in the Siril script: Check exposure, light curve, plate solve by `seqplatesolve`, resume after a stop. → [Measure](how-to/photometry.md#measure)
+- **Variable star photometry** in the Siril script: Check exposure, light curve, plate solve by `seqplatesolve`, resume after a stop, the flat used, cloudy images left out. → [Measure](how-to/photometry.md#measure)
+- **Time of maximum / minimum** with its error and the **O–C**. → [Extrema](how-to/photometry.md#extrema)
 - Explore: **Photometry** tab, a star's sessions put together across the drives. → [Light curves](how-to/photometry.md#results)
 - Result folders at the archive's root (`_PHOTOMETRY`, `_FIXED_FOREGROUND`, `_WCS_MOSAIC`). → [Files](reference/ports-files.md#where-the-data-lives)
 - Analyze everything: **Stop**, and shown again when you come back to it. → [Re-sync](how-to/archive.md#analyze-all)
