@@ -22,6 +22,9 @@ The highlights of the latest versions, with the page that explains them. Every d
 - Milky Way planner: **foreground pass**. → [Foreground](how-to/mosaic.md#foreground)
 - Catalog's Mosaic Inspector reads each frame's `.wcs` file. → [Mosaic](how-to/mosaic.md#dwarf-mosaic)
 - Camera settings: **Frames** on the Dwarf's page.
+- **Repair a failed capture**: a 2-image repair session, then Scope Archive's Repair opened with both sessions. → [Repair](how-to/capture.md#repair)
+- **Connect during a capture** no longer switches the Dwarf's mode (it could hang it); a capture whose counts no longer move is said on the card; a capture ended short says *battery empty* when it was; **Connect all** connects every Dwarf again. → [Troubleshooting](reference/troubleshooting.md)
+- The five previous logs kept. → [Logs](how-to/maintain.md#logs)
 
 ### 3.2.3 – 3.2.5
 
@@ -50,6 +53,8 @@ The highlights of the latest versions, with the page that explains them. Every d
 - Explore: **Fix the foreground** of a wide session. → [Fix foreground](how-to/process.md#fix-foreground)
 - Explore: a session's **frames**, reject the bad ones. → [Quality](how-to/explore.md#quality)
 - Sky Map: **best session per object**, hide a session. → [Sky map](how-to/explore.md#sky-map)
+- Mosaic page, **Repair** of a failed capture (not only a mosaic), with a backup in the work directory. → [Repair](how-to/capture.md#repair)
+- Photometry: comparison stars without Siril's server (local Gaia, VizieR mirrors, AAVSO), the **measuring circle chosen** on the check star, **variable comparison stars** left out. → [Measure](how-to/photometry.md#measure)
 
 ### V3.4.2 – V3.4.5
 

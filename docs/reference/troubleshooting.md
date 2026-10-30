@@ -24,6 +24,15 @@
 ??? question "Siril closed the connection during Build Sessions"
     Siril was closed or crashed, but the files made so far are kept. Start Siril again, then **Load Dwarfium JSON** → **Resume (keep the files)** → **Build Sessions**. → [Variable stars](../how-to/photometry.md#measure)
 
+??? question "The card says *no new image for N min*"
+    The capture's counts haven't moved for 10 min (or 4 × the exposure): the Dwarf may be stuck. Check it in the official app; if it no longer answers, restart it and [repair the capture](../how-to/capture.md#repair).
+
+??? question "A program says *stopped by the Dwarf at 139/400: battery empty*"
+    The Dwarf ended the capture itself, its battery at 10 % or less (it stops around 5–6 %), or it sent POWER OFF. The images taken are kept.
+
+??? question "A capture isn't in the Dwarf's Album after a crash or a reboot"
+    Its images are on the Dwarf but not its stacked FITS: [repair it](../how-to/capture.md#repair).
+
 ??? question "A program is in Error but the Dwarf kept capturing"
     Programs → Results → **Force resume**. → [Force resume](../how-to/capture.md#force-resume)
 

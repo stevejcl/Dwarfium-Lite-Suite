@@ -29,7 +29,7 @@ The Hub is the watchdog: if the Hub is closed, nothing is watched.
 
 **App:** Dwarfium Lite → `/logs`
 
-The log file, live, with a text filter. A running program also has its step-by-step trace on the Dwarf's page. Include a log excerpt when you [report a problem](https://github.com/stevejcl/astro_dwarf_session/issues).
+The log file, live, with a text filter. The five previous runs' logs are kept next to it (`astro_session.log.old`, `.old.2` … `.old.5`). A running program also has its step-by-step trace on the Dwarf's page. Include a log excerpt when you [report a problem](https://github.com/stevejcl/astro_dwarf_session/issues).
 
 ## Translate the apps into my language { #language }
 

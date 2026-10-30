@@ -49,7 +49,7 @@ Needs Siril 1.4.0+ and Internet (plate solve, APASS comparison stars, VSX).
 4. **🚀 Build Sessions** runs it:
     1. calibration with the dark and the flat (the DWARF's factory calibration, when Prepare for Siril found one), and the green channel (AAVSO TG band);
     2. plate solve of the whole sequence by `seqplatesolve` (about a minute for 500 images), then one by one any image it left unsolved;
-    3. comparison stars (APASS), the same in every image;
+    3. comparison stars (APASS through Siril; when its server doesn't answer: the star's earlier list, Siril's local Gaia catalog, a VizieR mirror, the AAVSO's), the same in every image;
     4. the script's own differential photometry.
 5. At the end you get `light_curve_*.csv` and its plot, the check star's scatter, and a survey of the field's stars (`stars_variability.csv`).
 
@@ -58,6 +58,8 @@ What it takes care of:
 - **Times:** DATE-OBS (the Dwarf's local time) is converted to UTC, with JD, HJD and BJD at mid-exposure, and the airmass for each point.
 - **Saturation:** stars above **3300 ADU** are left out, and comparison stars with a neighbour in their aperture too. You are asked whether to keep the target's saturated images: they are then flagged, drawn apart and kept out of the means.
 - **Clouds and planes:** an image with far fewer comparison stars than the others (under 3/4 of the session's median) or a much larger error (over twice the median) is flagged *cloudy*: kept in the CSV, drawn as a grey cross, left out of the means, the fit and the combined curve.
+- **Measuring circle:** each image measured with 1, 1.25, 1.5 and 2 × its stars' FWHM; the circle giving the steadiest check star is kept, the summary compares them.
+- **Variable comparison stars:** a comparison star varying (or spoiled by a neighbour too red to be in the list) is found on a first pass and left out of the zero point; the summary names it.
 - **Long sessions:** the lights are linked, not copied, and the intermediate images are deleted as it goes. 500 images would otherwise take about 40 GB.
 
 !!! tip "Siril closed, or crashed, during a long session"
