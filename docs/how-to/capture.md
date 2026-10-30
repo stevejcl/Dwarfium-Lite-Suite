@@ -84,6 +84,22 @@ With two or more Dwarfs of the same model, choose **Any Dwarf 3 (auto)** (or the
 
 After a network drop, a run can be marked as failed while the Dwarf is still capturing its target. *Force resume* follows it again to its end.
 
+## Repair a capture that failed (not in the Album) { #repair }
+
+**Apps:** Dwarfium Lite → Programs → **Results**, then Scope Archive → **Mosaic** → **Repair**, then the Dwarf app
+
+A capture that ended badly (the Dwarf hung, an empty battery, a reboot) keeps its images on the Dwarf, but its stacked FITS is missing: the session is in neither the Album nor the Megastack. DwarfLab's procedure, done by the apps:
+
+1. **Lite, Results:** on the program in Error, **Repair session**. The same program runs again with 2 images (same target, exposure, gain and filter): a new session in the Dwarf's Album.
+2. **Lite, Results:** once it is done, **Finish the repair in Scope Archive**. Scope Archive's Repair opens with the repair session (primary) and the failed capture (secondary) already found on the Dwarf.
+3. **Scope Archive:** the Dwarf connected (USB or network), check both sessions, **Start Repair**. A summary says what will be done; **Repair**. The new session's own images are removed, the failed capture's images, thumbnails, `shotsInfo.json` and stacked files copied into it, renamed to its name and date (their time kept). The failed session itself is left as it is.
+4. **Reboot the Dwarf**, then in the Dwarf app run a **Megastack** on that session. Its Album keeps the 2-image figures the Dwarf saved; the Megastack stacks all the images.
+
+!!! tip
+    - Choose a **work directory** in Scope Archive first: the new session's files the repair replaces are saved there (`<session>_before_repair`), a way back.
+    - The repair session can also be taken by hand (same target, exposure, gain, filter): then choose both sessions yourself in Scope Archive's Repair.
+    - The same way megastacks two sessions of one region under different names ("Unknown", a star near the target).
+
 ## Megastack / restack on the Dwarf { #megastack }
 
 **App:** Dwarfium Lite → the Dwarf's **Astro Sessions** explorer → **Megastack** (top right)

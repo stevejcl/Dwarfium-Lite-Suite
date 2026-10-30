@@ -38,6 +38,7 @@ Find your need below, or type it in the **search** box (++slash++). Each line le
 | [Use the Dwarf's own schedule (works without the PC)](capture.md#native) | Lite |
 | [Send targets to "any free Dwarf" of a model](capture.md#any-dwarf) | Lite |
 | [Resume a program that failed while the Dwarf kept capturing](capture.md#force-resume) | Lite |
+| [Repair a capture that failed (not in the Album)](capture.md#repair) | Lite, Scope Archive |
 | [Megastack / restack sessions on the Dwarf](capture.md#megastack) | Lite, Scope Archive |
 
 ## :material-view-grid: Mosaics and the Milky Way { #mosaic }

@@ -57,6 +57,6 @@ The assembly keeps running if you go to another page: come back to the tab to se
 |---|---|
 | **Stitch** | Assemble selected panels into a wide image from their WCS |
 | **Merge** | Add panels from a second session to a first one |
-| **Repair** | Fix a mosaic whose transfer was interrupted (a small correct session as reference) |
+| **Repair** | Fix a mosaic whose transfer was interrupted (a small correct session as reference) — or a [failed capture](capture.md#repair) |
 
-Mosaics without a final stacked file are listed in **Dwarf Configuration → Sessions with Errors**.
+Mosaics without a final stacked file, and captures without their stacked FITS, are listed in **Sessions in Error**.
