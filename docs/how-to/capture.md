@@ -84,6 +84,13 @@ With two or more Dwarfs of the same model, choose **Any Dwarf 3 (auto)** (or the
 
 After a network drop, a run can be marked as failed while the Dwarf is still capturing its target. *Force resume* follows it again to its end.
 
+Most of the time you won't need it. **Once the Dwarf has started the capture, only three things end it: its normal end (or the end time), the Dwarf's own stop (battery, limit…), or your Stop.**
+
+- **Network lost:** the program stays in progress. Lite tries to reconnect 3 times quickly, then **every 5 min** while a program is in progress. Reconnected, it follows the capture again and applies the end time. Not reconnected: the Dwarf finishes on its own, and the program is filed at your next connection, from what the Dwarf saved.
+- **A command without answer, or an error while following the capture:** the program is never run again from its goto (that would stop the capture). It stays in progress and is followed again as soon as the Dwarf answers. A Dwarf silent for 10 min is reconnected.
+- **Taken by the official app** (or another client): manual mode. Lite doesn't take it back; **Connect** in Lite when you are done.
+- Before the capture starts (goto, calibration, settings), an error may still end or retry the program as usual.
+
 ## Repair a capture that failed (not in the Album) { #repair }
 
 **Apps:** Dwarfium Lite → Programs → **Results**, then Scope Archive → **Mosaic** → **Repair**, then the Dwarf app
@@ -99,6 +106,7 @@ A capture that ended badly (the Dwarf hung, an empty battery, a reboot) keeps it
     - Choose a **work directory** in Scope Archive first: the new session's files the repair replaces are saved there (`<session>_before_repair`), a way back.
     - The repair session can also be taken by hand (same target, exposure, gain, filter): then choose both sessions yourself in Scope Archive's Repair.
     - The same way megastacks two sessions of one region under different names ("Unknown", a star near the target).
+    - In Scope Archive's Explore, such a session shows a red **FAILED CAPTURE** badge, and its **Repair** button opens the Repair with it as the secondary session.
 
 ## Megastack / restack on the Dwarf { #megastack }
 

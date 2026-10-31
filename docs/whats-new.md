@@ -25,6 +25,8 @@ The highlights of the latest versions, with the page that explains them. Every d
 - **Repair a failed capture**: a 2-image repair session, then Scope Archive's Repair opened with both sessions. → [Repair](how-to/capture.md#repair)
 - **Connect during a capture** no longer switches the Dwarf's mode (it could hang it); a capture whose counts no longer move is said on the card; a capture ended short says *battery empty* when it was; **Connect all** connects every Dwarf again. → [Troubleshooting](reference/troubleshooting.md)
 - The five previous logs kept. → [Logs](how-to/maintain.md#logs)
+- **A started capture is never stopped by Lite** for a network or answer problem; reconnection every 5 min while a program is in progress. → [Capture](how-to/capture.md#force-resume)
+- **Your own elements** for a variable star (e.g. Krakow's), over VSX's. → [Minima](how-to/photometry.md#minima)
 
 ### 3.2.3 – 3.2.5
 
@@ -55,6 +57,8 @@ The highlights of the latest versions, with the page that explains them. Every d
 - Sky Map: **best session per object**, hide a session. → [Sky map](how-to/explore.md#sky-map)
 - Mosaic page, **Repair** of a failed capture (not only a mosaic), with a backup in the work directory. → [Repair](how-to/capture.md#repair)
 - Photometry: comparison stars without Siril's server (local Gaia, VizieR mirrors, AAVSO), the **measuring circle chosen** on the check star, **variable comparison stars** left out. → [Measure](how-to/photometry.md#measure)
+- Photometry: **the star's last session's comparison stars** reused, **your own elements** for the O–C. → [Measure](how-to/photometry.md#measure)
+- Explore: a **failed capture** marked, repaired from there. → [Repair](how-to/capture.md#repair)
 
 ### V3.4.2 – V3.4.5
 

@@ -30,6 +30,9 @@
 ??? question "A program says *stopped by the Dwarf at 139/400: battery empty*"
     The Dwarf ended the capture itself, its battery at 10 % or less (it stops around 5–6 %), or it sent POWER OFF. The images taken are kept.
 
+??? question "The PC went off at night, the Dwarf no longer reached from another PC"
+    That PC may route your home network for Tailscale (a subnet router), and the other PC uses that route even at home. On the other PC, untick **Use Tailscale subnets** (`tailscale set --accept-routes=false`), or advertise only the remote sites' subnets. The capture itself goes on: Lite reconnects every 5 min while a program is in progress.
+
 ??? question "A capture isn't in the Dwarf's Album after a crash or a reboot"
     Its images are on the Dwarf but not its stacked FITS: [repair it](../how-to/capture.md#repair).
 
