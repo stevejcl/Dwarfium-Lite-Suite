@@ -21,7 +21,9 @@ The button at the top right of the Programs page turns the feature on for this r
 
 The window is half the eclipse plus 30 min on each side when its duration is known, else ± 1.5 h. For a pulsating star it covers a whole cycle (0.6 period on each side, 30 min to 1.5 h).
 
-**Stars and their elements:** the name alone is enough, the rest comes from VSX. Epoch and period typed in (e.g. Krakow's up-to-date elements) are kept over VSX's. **Update from VSX** refreshes them all.
+**Stars and their elements:** the name alone is enough, the rest comes from VSX. **Update from VSX** refreshes them all.
+
+**Your own elements:** VSX's can be decades old. For RZ Dra they date from 1979 and put the minimum almost 2 h early. In the stars list, the **pencil** next to a star takes a primary minimum (HJD) and the period, for example from Krakow's up-to-date elements ([www.as.up.krakow.pl/minicalc](https://www.as.up.krakow.pl/minicalc/)). They are kept over VSX's (a VSX update included), used for the minima, and shared with Scope Archive's photometry for the O–C. **Back to VSX's** drops them.
 
 !!! tip "Don't saturate the star"
     A star that saturates is measured too faint at its brightest. Start around **gain 60–80** and **60–90 s** exposures, and check them first with [Check exposure](#check-exposure).
@@ -49,7 +51,7 @@ Needs Siril 1.4.0+ and Internet (plate solve, APASS comparison stars, VSX).
 4. **🚀 Build Sessions** runs it:
     1. calibration with the dark and the flat (the DWARF's factory calibration, when Prepare for Siril found one), and the green channel (AAVSO TG band);
     2. plate solve of the whole sequence by `seqplatesolve` (about a minute for 500 images), then one by one any image it left unsolved;
-    3. comparison stars (APASS through Siril; when its server doesn't answer: the star's earlier list, Siril's local Gaia catalog, a VizieR mirror, the AAVSO's), the same in every image;
+    3. comparison stars: **a star already measured takes its last session's list**, so the same stars every night; a new star asks Siril (APASS), and when its server doesn't answer, Siril's local Gaia catalog, a VizieR mirror, then the AAVSO's. The same stars in every image;
     4. the script's own differential photometry.
 5. At the end you get `light_curve_*.csv` and its plot, the check star's scatter, and a survey of the field's stars (`stars_variability.csv`).
 
@@ -71,7 +73,7 @@ What it takes care of:
 
 ## Time of maximum or minimum, and O–C { #extrema }
 
-At the end of the measure, the script times each **maximum** (pulsating star) or **minimum** (eclipsing binary) inside the session, from the star's elements in VSX (period, epoch):
+At the end of the measure, the script times each **maximum** (pulsating star) or **minimum** (eclipsing binary) inside the session, from the star's elements: [your own](#minima) when you typed them in, else VSX's (period, epoch):
 
 - pulsating star: a Fourier series of the curve with the period fixed; eclipsing binary: Kwee – van Woerden; both checked against a local polynomial;
 - the time in HJD and BJD, in UTC and local time, with its error (± a few tenths of a minute on a good night), and the magnitude;
@@ -80,8 +82,11 @@ At the end of the measure, the script times each **maximum** (pulsating star) or
 
 Without a known period (VSX unreachable), only the session's own extremum is timed, with a warning. An extremum on the session's edges, or in saturated images, is not timed: the summary says why.
 
-!!! example "DY Peg, 2026-10-27"
-    Maximum at 22:02:45 local time, HJD 2461341.38110 ± 0.5 min, O–C −1.1 min, despite a cloud just before it (4 images left out).
+!!! example "DY Peg, October 2026"
+    Three maxima, two instruments, the same Gaia comparison stars, the flat applied: O–C −2.5 min (27/10, DWARF 3), −2.9 min (28/10, DWARF 3), −2.6 min (29/10, Dwarf Mini), each ± 0.4 min. DY Peg comes about 2.7 min before VSX's prediction.
+
+!!! warning "No minimum in the session?"
+    Check the elements first: RZ Dra's VSX elements predicted 21:01, its minimum came at about 22:58, after the session's end. Type in [up-to-date elements](#minima) and leave a margin.
 
 ## See a star's light curves { #results }
 
